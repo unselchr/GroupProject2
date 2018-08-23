@@ -8,7 +8,7 @@
 // Description: This defines the Sequalized Model for the User
 // ************************************************************
 
-export default function(sequelize, DataTypes) {
+module.exports =  function(sequelize, DataTypes) {
     var Users = sequelize.define("Users", {
         firstName: {
             type: DataTypes.STRING,
