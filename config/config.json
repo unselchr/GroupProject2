@@ -1,6 +1,7 @@
 {
   "development": {
     "username": "root",
+
     "password": "rootroot",
     "database": "farmPredictionDB",
     "host": "localhost",
