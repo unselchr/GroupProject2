@@ -1,6 +1,6 @@
 var db = require("../models");
-
-module.exports = function(app) {
+var authController = require("../controllers/authcontroller");
+module.exports = function(app, passport) {
   // Get all examples
   app.get("/api/examples", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
@@ -17,8 +17,20 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.json(dbExample);
     });
   });
+  //signup stuff below
+  app.get("/signup", authController.signup);
+  app.post(
+    "/signup",
+    passport.authenticate("local-signup", {
+      successRedirect: "/dashboard",
+
+      failureRedirect: "/signup"
+    })
+  );
 };
