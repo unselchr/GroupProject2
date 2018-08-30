@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
  
+
 <head>
-    <title></title>
+    <title>Sign In</title>
 </head>
- 
-<body>
-    <form id="signin" name="signin" method="post" action="signin">
+
+
+       {{!-- <form id="signin" name="signin" method="post" action="signin">
         <label for="email">Email Address</label>
         <input class="text" name="email" type="text" />
         <label for="password">Password</label>
         <input name="password" type="password" />
         <input class="btn" type="submit" value="Sign In" />
+       </form> --}}
+
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">Sign In</h2>
+    <form id="signin" name="signin" method="post" action="signin">
+        <div class="col-sm-6 form-group">
+          <label for="email">Email Address</label><input class="text" name="email" type="text" />
+        </div>
+        <div class="col-sm-6 form-group">
+          <label for="password">Password</label><input name="password" type="password" />
+        </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <input class="btn" type="submit" value="Sign In" />
+        </div>
+      </div> 
     </form>
- 
-</body>
+</div>
+
  
 </html>

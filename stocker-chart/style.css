@@ -26,3 +26,10 @@ a {
   display: block;
   color: #3e95cd;
 }
+
+.container-fluid {
+  padding: 60px 50px;
+}
+.bg-grey {
+  background-color: grey;
+}
