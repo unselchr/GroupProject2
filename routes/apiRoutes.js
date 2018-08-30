@@ -9,7 +9,7 @@ module.exports = function(app, passport) {
     passport.authenticate("local-signup", {
       successRedirect: "/dashboard",
 
-      failureRedirect: "/404"
+      failureRedirect: "/signup"
     })
   );
   app.get("/logout", authController.logout);
