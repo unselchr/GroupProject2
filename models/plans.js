@@ -82,7 +82,7 @@ module.exports = function(sequelize, DataTypes) {
     // A Plan belonsg to an User in a one-to-many relationship.
     // A Plan can't be created without an User due to the
     // foreign key constraint.
-    Plans.belongsTo(models.Users, {
+    Plans.belongsTo(models.user, {
       foreignKey: {
         allowNull: false
       }
