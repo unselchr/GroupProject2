@@ -15,4 +15,13 @@ exports.logout = function(req, res) {
     }
     res.redirect("/");
   });
+  exports.allPlans = function(req, res) {
+    res.json();
+  };
+  exports.plan = function(req, res) {
+    res.json();
+  };
+  exports.newPlan = function(req, res) {
+    res.render("/newPlan");
+  };
 };
