@@ -1,35 +1,42 @@
 body {
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
+  background-color: aquamarine;
 }
-
 .wrapper {
   max-width: 800px;
   margin: 50px auto;
 }
-
 h1 {
   font-weight: 200;
   font-size: 3em;
   margin: 0 0 0.1em 0;
 }
-
 h2 {
   font-weight: 200;
   font-size: 0.9em;
   margin: 0 0 20px;
   color: #999;
 }
-
 a {
   margin-top: 50px;
   display: block;
   color: #3e95cd;
 }
-
 .container-fluid {
   padding: 60px 50px;
 }
 .bg-grey {
   background-color: grey;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #f4511e;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif;
 }
