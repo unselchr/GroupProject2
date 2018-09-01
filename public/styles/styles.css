@@ -1,5 +1,5 @@
 a {
-    margin-top: 50px;
+    margin-top: 20px;
     display: block;
     color: #3e95cd;
 }
@@ -8,15 +8,20 @@ body {
     line-height: 1.8;
     color: #818181;
 }
+p {
+    text-align: center;
+}
 h1 {
     font-size: 120px;
+    text-align: center;
 }
 h2 {
     font-size: 24px;
     text-transform: uppercase;
     color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
 }
 h4 {
     font-size: 19px;
@@ -38,15 +43,61 @@ h4 {
 .bg-grey {
     background-color: #f6f6f6;
 }
-.material-icons {
-    size: 5000px
-}
 .item h4 {
     font-size: 19px;
     line-height: 1.375em;
     font-weight: 400;
     font-style: italic;
-    margin: 70px 0;
+    margin: 50px 0;
+}
+primaryColor {
+    color: rgb(163, 23, 133);
+    background-color: #f6f6f6;
+}
+form { 
+    margin: 0 auto; 
+    padding-top: 30px;
+    width: 400px;
+    text-align: center;
+    color: black;
+}
+.form-group {
+    margin: 0 auto; 
+    padding-top: 10px;
+    width: 400px;
+    text-align: center;
+    color: black;
+}    
+.form-group1 {
+    margin: 0 auto; 
+    padding-top: 1px;
+    padding-bottom: 10px;
+    width: 400px;
+    text-align: center;
+    color: black;
+    margin-left: 290px;
+}
+.form-group3 {
+    padding-bottom: 10px;
+}
+.signup {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+#signupemail {
+    margin-right: 30px;
+} 
+#signin {
+    text-align: center;
+    padding-bottom: 1px;
+}
+#signinbtn {
+    margin-left: 450px;
+}
+#signupbtn {
+    margin-left: 450px;
 }
 .navbar {
     margin-bottom: 0;
@@ -61,13 +112,16 @@ h4 {
 .navbar li a, .navbar .navbar-brand {
     color: rgb(252, 252, 252) !important;
 }
-.navbar-nav li a:hover, .navbar-nav li.active a {
+/* .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #c53061 !important;
     background-color: rgb(223, 215, 101) !important;
-}
+} */
 .navbar-default .navbar-toggle {
     border-color: transparent; 
     color: rgb(214, 23, 23) !important;
+}
+.dropdown-menu {
+    background-color: rgb(62, 146, 13);
 }
 .img404 {
     display: block;
@@ -76,14 +130,13 @@ h4 {
     margin-right: auto;
     width: 50%;
 }
+footer {
+    padding: 10px 10px;
+}
 @media screen and (max-width: 768px) {
 .col-sm-4 {
     text-align: center;
     margin: 25px 0;
-}
-.btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
 }
 }
 @media screen and (max-width: 480px) {
