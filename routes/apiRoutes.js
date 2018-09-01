@@ -8,7 +8,7 @@ module.exports = function(app, passport) {
     "/signup",
     passport.authenticate("local-signup", {
       successRedirect: "/dashboard",
-
+      failureFlash:true,
       failureRedirect: "/signup"
     })
   );
@@ -17,11 +17,15 @@ module.exports = function(app, passport) {
     "/signin",
     passport.authenticate("local-signin", {
       successRedirect: "/dashboard",
-
+      failureFlash:true,
       failureRedirect: "/signin"
     })
   );
   app.get("/signin", authController.signin);
+  app.get("/allPlans", isLoggedIn, authController.allPlans); //gets all plans by a users id and sends it as json
+  app.get("/plan:planID", isLoggedIn, authController.plan); //gets plan by id and sends it as json
+  app.get("/newPlan", isLoggedIn, authController.newPlan); //renders new plan page
+  app.get("/myID",isLoggedIn,authController.myID)
   //must be last
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -29,7 +33,5 @@ module.exports = function(app, passport) {
     }
     res.redirect("/signin");
   }
-  app.get("/allPlans", isLoggedIn, authController.allPlans); //gets all plans by a users id and sends it as json
-  app.get("/plan:planID", isLoggedIn, authController.plan); //gets plan by id and sends it as json
-  app.get("/newPlan", isLoggedIn, authController.newPlan); //renders new plan page
+
 };
