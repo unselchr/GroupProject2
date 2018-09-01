@@ -43,6 +43,11 @@ var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
+
+//DEBUG CODE
+// process.env.NODE_ENV = "test";
+console.log("server.js - process.env.NODE_ENV = " + process.env.NODE_ENV);
+// END Debug Code
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }

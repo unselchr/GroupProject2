@@ -10,7 +10,7 @@
 // ************************************************************
 
 module.exports = function(sequelize, DataTypes) {
-  var Plans = sequelize.define("Plans", {
+  var Plan = sequelize.define("plan", {
     planTitle: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -78,16 +78,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Plans.associate = function(models) {
-    // A Plan belonsg to an User in a one-to-many relationship.
-    // A Plan can't be created without an User due to the
-    // foreign key constraint.
-    Plans.belongsTo(models.Users, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // Plan.associate = function(models) {
+  //   // A Plan belonsg to an User in a one-to-many relationship.
+  //   // A Plan can't be created without an User due to the
+  //   // foreign key constraint.
+  //   Plan.belongsTo(models.user, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
 
-  return Plans;
+  return Plan;
 };
