@@ -1,3 +1,5 @@
+var user = require("../models/user");
+var plan = require("../models/plans");
 var exports = (module.exports = {});
 exports.dashboard = function(req, res) {
   res.render("dashboard");
@@ -17,7 +19,7 @@ exports.logout = function(req, res) {
   });
 };
 exports.allPlans = function(req, res) {
-  res.render("dashboard", {});
+  res.json();
 };
 exports.plan = function(req, res) {
   res.render("plan", {});
@@ -25,3 +27,6 @@ exports.plan = function(req, res) {
 exports.newPlan = function(req, res) {
   res.render("/newPlan");
 };
+exports.myID = function(req, res) {
+  res.json({id:req.session.passport.user});
+}
