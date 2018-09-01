@@ -1,36 +1,152 @@
-.primaryColor{
-    color:black;
-    background-color:green;
+a {
+    margin-top: 20px;
+    display: block;
+    color: #3e95cd;
 }
-.secondaryColor{
-    color:black;
-    background-color:lightGreen;
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+p {
+    text-align: center;
+}
+h1 {
+    font-size: 120px;
+    text-align: center;
+}
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+}  
+.jumbotron {
+    background-color: green;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
 }
 .container-fluid {
-    padding: 60px 50px;
-  }
-  .bg-grey {
-    background-color: grey;
-  }
-  .navbar {
+    padding: 60px 10px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 50px 0;
+}
+primaryColor {
+    color: rgb(163, 23, 133);
+    background-color: #f6f6f6;
+}
+form { 
+    margin: 0 auto; 
+    padding-top: 30px;
+    width: 400px;
+    text-align: center;
+    color: black;
+}
+.form-group {
+    margin: 0 auto; 
+    padding-top: 10px;
+    width: 400px;
+    text-align: center;
+    color: black;
+}    
+.form-group1 {
+    margin: 0 auto; 
+    padding-top: 1px;
+    padding-bottom: 10px;
+    /* width: 400px; */
+    text-align: center;
+    color: black;
+    margin-left: 290px;
+}
+.form-group3 {
+    margin: 0 auto; 
+    padding-top: 1px;
+    padding-bottom: 10px;
+    /* width: 400px; */
+    text-align: center;
+    color: black;
+    margin-left: 0px;
+}
+.signup {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+#signupemail {
+    margin-right: 30px;
+} 
+#signin {
+    text-align: center;
+    padding-bottom: 1px;
+}
+#signinbtn {
+    margin-left: 20px;
+}
+#signupbtn {
+    margin-left: 20px;
+}
+.navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: green;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
+    line-height: 1.42857143 !important; 
+    letter-spacing: 0px;
     border-radius: 0;
-    font-family: Montserrat, sans-serif;
 }
 .navbar li a, .navbar .navbar-brand {
-    color: green !important;
+    color: rgb(252, 252, 252) !important;
 }
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color:green!important;
-}
+/* .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #c53061 !important;
+    background-color: rgb(223, 215, 101) !important;
+} */
 .navbar-default .navbar-toggle {
-    border-color: red;
-    color: green !important;
+    border-color: transparent; 
+    color: rgb(214, 23, 23) !important;
+}
+.dropdown-menu {
+    background-color: rgb(62, 146, 13);
+}
+.img404 {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+footer {
+    padding: 10px 10px;
+}
+@media screen and (max-width: 1080px) {
+.col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+}
+}
+@media screen and (max-width: 480px) {
+.logo {
+      font-size: 150px;
+}
 }
