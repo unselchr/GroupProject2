@@ -3,6 +3,12 @@ a {
     display: block;
     color: #3e95cd;
 }
+
+.wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+  }
+  
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
