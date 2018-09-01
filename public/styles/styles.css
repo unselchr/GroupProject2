@@ -72,13 +72,19 @@ form {
     margin: 0 auto; 
     padding-top: 1px;
     padding-bottom: 10px;
-    width: 400px;
+    /* width: 400px; */
     text-align: center;
     color: black;
     margin-left: 290px;
 }
 .form-group3 {
+    margin: 0 auto; 
+    padding-top: 1px;
     padding-bottom: 10px;
+    /* width: 400px; */
+    text-align: center;
+    color: black;
+    margin-left: 0px;
 }
 .signup {
     padding-top: 10px;
@@ -94,10 +100,10 @@ form {
     padding-bottom: 1px;
 }
 #signinbtn {
-    margin-left: 450px;
+    margin-left: 20px;
 }
 #signupbtn {
-    margin-left: 450px;
+    margin-left: 20px;
 }
 .navbar {
     margin-bottom: 0;
@@ -133,7 +139,7 @@ form {
 footer {
     padding: 10px 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 .col-sm-4 {
     text-align: center;
     margin: 25px 0;
