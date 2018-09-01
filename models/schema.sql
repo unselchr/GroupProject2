@@ -2,4 +2,4 @@ DROP DATABASE IF EXISTS farmpredictiondb;
 CREATE DATABASE farmpredictiondb;
 
 use farmpredictiondb;
-select * from user;
+select * from plans;
