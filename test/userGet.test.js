@@ -13,50 +13,81 @@ describe("GET /api/users", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
+    console.log("in beforeEach");
     request = chai.request(server);
     return db.sequelize.sync({ force: true });
   });
 
-  it("should find all examples", function(done) {
+  it("should find all users", function(done) {
     // Add some examples to the db to test with
-    db.users.bulkCreate([
-      { userName: "First Example", firstName: "Fred", lastName: "Flinstone" },
-      { userName: "Second Example", firstName: "George", lastName: "Jetson" }
-    ]).then(function() {
-      // Request the route that returns all examples
-      request.get("/api/users").end(function(err, res) {
-        var responseStatus = res.status;
-        var responseBody = res.body;
+    db.user
+      .bulkCreate([
+        {
+          firstname: "Fred",
+          lastname: "Flinstone",
+          username: "Fstone",
+          about: "about",
+          email: "fredf@somewhere.com",
+          password: "flint",
+          lastLogin: "2018-08-29T09:05:02.000Z"
+          // createdAt: sequelize.NOW(),
+          // updatedAt: sequelize.NOW()
+        },
+        {
+          firstname: "George",
+          lastname: "Jetson",
+          username: "GJet",
+          about: "about",
+          email: "george@future.com",
+          password: "elroy",
+          lastLogin: "2018-08-29T09:05:02.000Z"
+          // createdAt: sequelize.NOW(),
+          // updatedAt: sequelize.NOW()
+        }
+      ])
+      .then(function() {
+        // Request the route that returns all examples
+        request.get("/api/users").end(function(err, res) {
+          var responseStatus = res.status;
+          var responseBody = res.body;
 
-        // Run assertions on the response
+          // Run assertions on the response
 
-        expect(err).to.be.null;
+          expect(err).to.be.null;
 
-        expect(responseStatus).to.equal(200);
+          expect(responseStatus).to.equal(200);
 
-        expect(responseBody)
-          .to.be.an("array")
-          .that.has.lengthOf(2);
+          expect(responseBody)
+            .to.be.an("array")
+            .that.has.lengthOf(2);
 
-        expect(responseBody[0])
-          .to.be.an("object")
-          .that.includes({
-            userHame: "First Example",
-            firstName: "Fred",
-            LastName: "Flinstone"
-          });
+          expect(responseBody[0])
+            .to.be.an("object")
+            .that.includes({
+              firstname: "Fred",
+              lastname: "Flinstone",
+              username: "Fstone",
+              about: "about",
+              email: "fredf@somewhere.com",
+              password: "flint",
+              lastLogin: "2018-08-29T09:05:02.000Z"
+            });
 
-        expect(responseBody[1])
-          .to.be.an("object")
-          .that.includes({
-            userHame: "Second Example",
-            firstName: "George",
-            LastName: "Jetson"
-          });
+          expect(responseBody[1])
+            .to.be.an("object")
+            .that.includes({
+              firstname: "George",
+              lastname: "Jetson",
+              username: "GJet",
+              about: "about",
+              email: "george@future.com",
+              password: "elroy",
+              lastLogin: "2018-08-29T09:05:02.000Z"
+            });
 
-        // The `done` function is used to end any asynchronous tests
-        done();
+          // The `done` function is used to end any asynchronous tests
+          done();
+        });
       });
-    });
   });
 });

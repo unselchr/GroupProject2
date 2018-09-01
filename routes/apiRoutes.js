@@ -1,4 +1,4 @@
-//var db = require("../models");
+var db = require("../models");
 var authController = require("../controllers/authcontroller");
 module.exports = function(app, passport) {
   app.get("/dashboard", isLoggedIn, authController.dashboard);
@@ -34,5 +34,19 @@ module.exports = function(app, passport) {
     }
     res.redirect("/signin");
   }
+
+  // Delete an Plan by id
+  app.delete("/api/plans/:id", function(req, res) {
+    db.plan.destroy({ where: { id: req.params.id } }).then(function(dbPlans) {
+      res.json(dbPlans);
+    });
+  });
+  
+  // Delete an User by id
+  app.delete("/api/users/:id", function(req, res) {
+    db.user.destroy({ where: { id: req.params.id } }).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
 
 };
