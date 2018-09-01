@@ -78,16 +78,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // Plan.associate = function(models) {
-  //   // A Plan belonsg to an User in a one-to-many relationship.
-  //   // A Plan can't be created without an User due to the
-  //   // foreign key constraint.
-  //   Plan.belongsTo(models.user, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
+  Plans.associate = function(models) {
+    // A Plan belonsg to an User in a one-to-many relationship.
+    // A Plan can't be created without an User due to the
+    // foreign key constraint.
+    Plans.belongsTo(models.user, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return Plan;
 };
