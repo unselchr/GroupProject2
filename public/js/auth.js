@@ -38,6 +38,7 @@ $("#createPlan").on("click",function(event){
         method:"POST",
         data:newPlan
     }).then(function(response){
-
+        console.log(response);
+        window.location.href=response;
     })
 })

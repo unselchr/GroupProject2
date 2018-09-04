@@ -50,5 +50,5 @@ exports.postNewPlan = function(req, res) {
     pricePerHeadPer100Pounds:newPlan.futurePrice,
     userId:newPlan.userID
   })
-  res.redirect("/dashboard");
+  res.send("/dashboard");
 }
