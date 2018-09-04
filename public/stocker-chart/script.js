@@ -51,7 +51,7 @@ var months = [0, 1, 2, 3, 4, 5, 6];
   var finalWeightPerHead = aveStartingWeight + totalWeightGainPerHead;
 //
 // 7. Total Sale Price Per Head is the final weight times the sale price per hundred pounds 
-  var totalSalePricePerHead = finalWeightPerHead = pricePerHeadPer100Pounds;
+  var totalSalePricePerHead = finalWeightPerHead * pricePerHeadPer100Pounds;
 //
 // 8. Total (Sale) Price
   var totalPrice = numHeadsPurchased * totalSalePricePerHead;
