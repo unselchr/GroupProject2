@@ -18,11 +18,12 @@ exports.onePlan = function(req, res) {
             userId: req.session.passport.user
         }
     }).then(function(data){
-        if(data){
+        //console.log("\n\n"+data+"\n\n");
+        if(data==null || data=={}){
             res.json(data);
         }
         else{
-            res.send("plan does not exist or you are not it's owner");
+            res.render("404");
         }
         
     })
