@@ -36,7 +36,7 @@ exports.allPlans = function(req, res) {
 };
 exports.plan = function(req, res) {
   console.log("authcontroller - exports.plan");
-  res.render("plan", {});
+  res.render("plan", plan);
 };
 exports.newPlan = function(req, res) {
   console.log("authcontroller - exports.newPlan");

@@ -4,29 +4,44 @@
 var models = require("../models");
 // var user = models.user;
 var plan = models.Plans;
-var express = require("express");
+// var express = require("express");
 
 // ************************************************************
 // Import the model (plan.js) to use its database functions.
 // ************************************************************
 // var plan = require("../models/plan.js");
 
-var router = express.Router();
+// var router = express.Router();
 
 // ************************************************************
 // Create all our routes and set up logic within those routes
 // where required.
 // ************************************************************
-router.get("/api/plans/:id", function(req, res) {
-  // var condition = "id = " + req.params.id;
-  console.log("plansController.js - router.get");
-  plan.selectAll({ where: { id: req.params.id } }, function(data) {
-    var hbsObject = {
-      plans: data
-    };
-    res.render("dashboard", hbsObject);
+exports.showPlan = function(req, res) {
+  console.log("plansController.js - export.showPlan");
+  // console.log("plansController - res = " + JSON.stringify(req));
+  plan.findAll({ where: { userID: req.session.passport.user } }, function(
+    data
+  ) {
+    // var hbsObject = {
+    //   plans: data
+    // };
+    console.log("plansController - findAll - data = " + data);
+    res.render("dashboard", data);
+    // });
   });
-});
+};
+
+// router.get("/api/plans/:id", function(req, res) {
+//   // var condition = "id = " + req.params.id;
+//   console.log("plansController.js - router.get");
+//   plan.selectAll({ where: { id: req.params.id } }, function(data) {
+//     var hbsObject = {
+//       plans: data
+//     };
+//     res.render("dashboard", hbsObject);
+//   });
+// });
 
 // // ************************************************************
 // // Add new plan to the db.
@@ -63,4 +78,4 @@ router.get("/api/plans/:id", function(req, res) {
 // ************************************************************
 // Export routes for server.js to use.
 // ************************************************************
-module.exports = router;
+// module.exports = router;
