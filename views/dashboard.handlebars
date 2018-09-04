@@ -1,3 +1,19 @@
 <h1>THIS IS A PROTECTED PAGE!!!!!!!!</h1>
-<h6>Your User ID is:<span id="userID">NULL</span></h6>
-<script src="js/auth.js"></script>
+{{!-- <h6>Your User ID is:<span id="userID">NULL</span></h6> --}}
+
+<p>***************************************</p>
+
+<h1>Your Plans</h1>
+
+<ul>
+  {{#each plans}}
+	<button class="plan" data-id="{{id}}" data-title="{{title}}">
+		{{!-- {{ }} --}}
+	</button>
+
+	<button class="delete-plan" data-id="{{this.id}}">DELETE!</button>
+  {{/each}}
+</ul>
+
+{{!-- <script src="js/auth.js"></script> --}}
+<script src="js/plansCode.js"></script>
