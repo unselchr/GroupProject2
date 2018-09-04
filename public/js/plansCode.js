@@ -1,4 +1,5 @@
 // var db = require("../modules");
+$("document").ready(
 
 $("#delete-plan").on("click", function() {
   event.preventDefault();
@@ -17,6 +18,7 @@ $("#delete-plan").on("click", function() {
     window.location.href = response;
   });
 });
+);
 
 // ***********************************************************
 // var plans = {
