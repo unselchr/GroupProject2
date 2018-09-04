@@ -1,18 +1,22 @@
-<h1>THIS IS A PROTECTED PAGE!!!!!!!!</h1>
+{{!-- <h1>THIS IS A PROTECTED PAGE!!!!!!!!</h1> --}}
 {{!-- <h6>Your User ID is:<span id="userID">NULL</span></h6> --}}
 
-<p>***************************************</p>
-
-<h1>Your Plans</h1>
+{{!-- <p>***************************************</p> --}}
+<br>
+<h2>Your Plans</h2>
 
 <ul>
-	<p>dashboard.handlebars - html console.log</p>
-  {{#each plans}}
-	<button class="plan" data-id="{{id}}" data-title="{{title}}">
-		{{!-- {{ }} --}}
-	</button>
+	{{!-- <p>dashboard.handlebars - html console.log</p> --}}
+  {{#each data}}
+	<P>
+		<strong>{{ this.planTitle }}</strong>
+		<button class="plan" data-id="{{this.id}}" data-title="{{this.planTitle}}">
+			{{!-- {{ data.planTitle }} --}}
+			Calculate
+		</button>
 
-	<button class="delete-plan" data-id="{{this.id}}">DELETE!</button>
+		<button class="delete-plan" data-id="{{this.id}}">DELETE!</button>
+	</p>
   {{/each}}
 </ul>
 

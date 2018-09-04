@@ -51,20 +51,20 @@ exports.postNewPlan = function(req, res) {
   console.log("authcontroller - exports.postNewPlan");
   var newPlan = req.body;
   plan.create({
-    planTitle:newPlan.title,
-    numHeadsPurchased:newPlan.heads,
-    aveStartingWeight:newPlan.startingWeight,
-    costPerHeadPer100Pounds:newPlan.costPerHundredLbs,
-    isManualCPHP100:true,
-    pastureAcresPerHead:newPlan.acresPerHead,
-    pastureRentPerHead:newPlan.rentPerHead,
-    vetCostPerHead:newPlan.vetCostPerHead,
-    truckTripPerHead:newPlan.transportPerHead,
-    interestRate:newPlan.interestRate,
-    weightGainPerDay:newPlan.lbsPerDay,
-    numDaysOnPasture:newPlan.daysOnPasture,
-    pricePerHeadPer100Pounds:newPlan.futurePrice,
-    userId:newPlan.userID
-  })
+    planTitle: newPlan.title,
+    numHeadsPurchased: newPlan.heads,
+    aveStartingWeight: newPlan.startingWeight,
+    costPerHeadPer100Pounds: newPlan.costPerHundredLbs,
+    isManualCPHP100: true,
+    pastureAcresPerHead: newPlan.acresPerHead,
+    pastureRentPerHead: newPlan.rentPerHead,
+    vetCostPerHead: newPlan.vetCostPerHead,
+    truckTripPerHead: newPlan.transportPerHead,
+    interestRate: newPlan.interestRate,
+    weightGainPerDay: newPlan.lbsPerDay,
+    numDaysOnPasture: newPlan.daysOnPasture,
+    pricePerHeadPer100Pounds: newPlan.futurePrice,
+    userId: newPlan.userID
+  });
   res.send("/dashboard");
-}
+};
