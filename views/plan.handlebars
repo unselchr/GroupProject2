@@ -1,4 +1,20 @@
 
+{{!-- Input Variables
+planTitle:newPlan.title,
+numHeadsPurchased:newPlan.heads,
+aveStartingWeight:newPlan.startingWeight,
+costPerHeadPer100Pounds:newPlan.costPerHundredLbs,
+isManualCPHP100:true,
+pastureAcresPerHead:newPlan.acresPerHead,
+pastureRentPerHead:newPlan.rentPerHead,
+vetCostPerHead:newPlan.vetCostPerHead,
+truckTripPerHead:newPlan.transportPerHead,
+interestRate:newPlan.interestRate,
+weightGainPerDay:newPlan.lbsPerDay,
+numDaysOnPasture:newPlan.daysOnPasture,
+pricePerHeadPer100Pounds:newPlan.futurePrice,
+userId:newPlan.userID --}}
+
 <!-- Container -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">PARAMETERS FOR {{msg}} PLAN</h2>
@@ -7,62 +23,61 @@
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Number of Head</h3>
-          <input class="form-control" type="text" required>
+          <input class="form-control" value={{numHeadsPurchased}} type="text" required>{{numHeadsPurchased}}</input>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Average Starting Weight (lbs)</h3>
-          <input class="form-control" placeholder={{aveStartingWeight}} type="text" required>
+          <input class="form-control" value={{aveStartingWeight}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Cost Per Head Per Hundred Weight (lbs)</h3>
-          <input class="form-control" placeholder={{costPerHeadPer100Pounds}} type="text" required>
+          <input class="form-control" value={{costPerHeadPer100Pounds}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Pasture Acres Per Head</h3>
-          <input class="form-control" placeholder={{pastureAcresPerHead}} type="text" required>
+          <input class="form-control" value={{pastureAcresPerHead}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Pasture Rent Per Head</h3>
-          <input class="form-control" placeholder={{pastureRentPerHead}} type="text" required>
+          <input class="form-control" value={{pastureRentPerHead}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Vet Cost Per Head</h3>
-          <input class="form-control" placeholder={{vetCostPerHead}} type="text" required>
+          <input class="form-control" value={{vetCostPerHead}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Trucking Cost Per Head</h3>
-          <input class="form-control" placeholder={{truckTripPerHead}} type="text" required>
+          <input class="form-control" value={{truckTripPerHead}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Interest Rate</h3>
-          <input class="form-control" placeholder={{interestRate}} type="text" required>
+          <input class="form-control" value={{interestRate}} type="text" required>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Weight Gain Per Day (lbs)</h3>
           <input class="form-control" value={{weightGainPerDay}} type="text" required>
-          
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <h3>Number of Days on Pasture</h3>
-          <input class="form-control" placeholder={{numHeadsPurchased}} type="text" required>
+          <input class="form-control" value={{numHeadsPurchased}} type="text" required>
         </div>
       </div>
 
@@ -75,26 +90,46 @@
     </div>
   </div>
 
-    planTitle:newPlan.title,
-    numHeadsPurchased:newPlan.heads,
-    aveStartingWeight:newPlan.startingWeight,
-    costPerHeadPer100Pounds:newPlan.costPerHundredLbs,
-    isManualCPHP100:true,
-    pastureAcresPerHead:newPlan.acresPerHead,
-    pastureRentPerHead:newPlan.rentPerHead,
-    vetCostPerHead:newPlan.vetCostPerHead,
-    truckTripPerHead:newPlan.transportPerHead,
-    interestRate:newPlan.interestRate,
-    weightGainPerDay:newPlan.lbsPerDay,
-    numDaysOnPasture:newPlan.daysOnPasture,
-    pricePerHeadPer100Pounds:newPlan.futurePrice,
-    userId:newPlan.userID
-
-
+  <h2 class="text-center">CALCULATED VALUES FOR {{msg}} PLAN</h2>
   <div class="row">
     <div class="col-sm-12 text-center">
 
-
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <h3>Total Cost Per Head (including interest)</h3>
+          <input class="form-control" value={{totalCostPerHead}} type="text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <h3>Final Weight Per Head</h3>
+          <input class="form-control" value={{finalWeightPerHead}} type="text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <h3>Projected Sale Price Per Head Per Hundred Pounds</h3>
+          <input class="form-control" value={{pricePerHeadPer100Pounds}} type="text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <h3>Projected Sale Price Per Head</h3>
+          <input class="form-control" value={{totalSalePricePerHead}} type="text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <h3>Projected Total Sale Price</h3>
+          <input class="form-control" value={{totalPrice}} type="text" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <h3>Projected Total Margin</h3>
+          <input class="form-control" value={{totalMargin}} type="text" required>
+        </div>
+      </div>
 
     </div>
   </div>
