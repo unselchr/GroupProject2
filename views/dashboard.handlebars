@@ -7,17 +7,23 @@
 
 <ul>
 	{{!-- <p>dashboard.handlebars - html console.log</p> --}}
-  {{#each data}}
-	<P>
-		<strong>{{ this.planTitle }}</strong>
-		<button class="plan" data-id="{{this.id}}" data-title="{{this.planTitle}}">
-			{{!-- {{ data.planTitle }} --}}
-			Calculate
-		</button>
+	{{#if data.length}}
+		{{#each data}}
+		<P>
+			<strong>{{ this.planTitle }}</strong>
+			<button class="btn btn-default" id="calc-plan" data-id="{{this.id}}" data-title="{{this.planTitle}}">
+				{{!-- {{ data.planTitle }} --}}
+				Calculate
+			</button>
 
-		<button class="delete-plan" data-id="{{this.id}}">DELETE!</button>
-	</p>
-  {{/each}}
+			<button class="btn btn-default" id="delete-plan" data-id="{{this.id}}">DELETE!</button>
+		</p>
+		{{/each}}
+	{{else}}
+		<h4>If you do not have any plans, please create one.</h4>
+		<h4>If you do have plans, please select the "My Plans" option </h4>
+		<h4>from the Account Pages menu</h4>
+	{{/if}}
 </ul>
 
 {{!-- <script src="js/auth.js"></script> --}}

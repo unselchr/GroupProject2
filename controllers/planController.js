@@ -1,5 +1,5 @@
 var models = require("../models");
-var user = models.user;
+// var user = models.user;
 var plan = models.Plans;
 var exports = (module.exports = {});
 exports.allPlans = function(req, res) {
