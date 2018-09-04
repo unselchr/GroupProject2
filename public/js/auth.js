@@ -6,6 +6,12 @@ $("document").ready(
     }).then(function(response){
         $("#userID").text(response.id);
         uid=response.id;
+    }),
+    $.ajax({
+        url:"allPlans",
+        method:"GET"
+    }).then(function(response) {
+        $("#jsondump").text(response);
     })
 )
 $("#createPlan").on("click",function(event){
