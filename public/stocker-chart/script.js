@@ -62,25 +62,27 @@ var months = [0, 1, 2, 3, 4, 5, 6];
 //
 
 //--------------------------
-// Array Calculations Section (calculate these values for each month)
+// Array Calculations Section (calculate these values for the purchase date
+// and for each month thereafter)
 //--------------------------
 //
-// Weight Per Head Array
-  var finalWeightPerHeadArray = [];
+  var totalCostPerHeadArray = [];
+  var totalCostArray = [];
 
-// Price Per Head Per 100 Array
-// Price Per Head
-// Total Cost Per Head
-// Margin Per Head
-//
-// Total Price
-// Total Cost
-// Total Margin
+  var monthlyWeightPerHead = [];
+  var monthlyPricePerHeadPer100Pounds = [];
+  var monthlyPricePerHead = [];
+  var monthlyTotalPrice = [];
 
 for (i = 0; i < 7; i++) {
+  totalCostPerHeadArray(i) = totalCostPerHead;
+  totalCostArray(i) = totalCost;
 
+  monthlyWeightPerHead(i) = aveStartingWeight + (weightGainPerDay * i * 30);
+  monthlyPricePerHeadPer100Pounds(i) = costPerHeadPer100Pounds - ((i/6) * (costPerHeadPer100Pounds - pricePerHeadPer100Pounds));
+  monthlyPricePerHead(i) = monthlyPricePerHeadPer100Pounds(i) * monthlyWeightPerHead(i);
+  monthlyTotalPrice(i) = numHeadsPurchased * monthlyPricePerHead(i);
 }
-
 
 
 //--------------------------
@@ -93,13 +95,13 @@ var myChart = new Chart(ctx, {
     labels: months,
     datasets: [
       {
-        data: totalCost,
+        data: totalCostArray,
         label: "Total Cost",
         borderColor: "#3e95cd",
         fill: false
       },
       {
-        data: totalPrice,
+        data: monthlyTotalPrice,
         label: "Total Price",
         borderColor: "#8e5ea2",
         fill: false
