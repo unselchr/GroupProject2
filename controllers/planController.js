@@ -22,11 +22,11 @@ exports.onePlan = function(req, res) {
       }
     })
     .then(function(data) {
-      //console.log("\n\n"+data+"\n\n");
-      if (data === null || data === {}) {
+      //console.log("\n\n" + data + "\n\n");
+      if (!(data === null || data === {} || data === [])) {
         res.json(data);
       } else {
-        res.render("404");
+        res.send("/404");
       }
     });
 };
