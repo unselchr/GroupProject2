@@ -1,25 +1,25 @@
 // var db = require("../modules");
-// $("document").ready(
-
-$(".delete-plan").on("click", function() {
-  // event.preventDefault();
-  //takes a json object with keys title,heads,rentPerHead,startingWeight,costPerHundredLbs,acresPerHead,otherCostPerHead,interestRate,lbsPerDay,daysOnPasture,vetCostPerHead,transportPerHead,userID,futurePrice
-  // };
-  var thisID = $(this).attr("data-id");
-  console.log("plansCode - delete-plan on click event handler");
-  console.log("plansCode - delete-plan on click event handler id = " + thisID);
-  $.ajax({
-    url: "dashboard",
-    method: "DELETE",
-    data: { id: thisID }
-  }).then(function(response) {
-    console.log("plansCode.js - Delete on click");
-    console.log(response);
-    window.location.href = response;
-  });
-});
-
-// );
+$("document").ready(
+  $("#delete-plan").on("click", function() {
+    event.preventDefault();
+    //takes a json object with keys title,heads,rentPerHead,startingWeight,costPerHundredLbs,acresPerHead,otherCostPerHead,interestRate,lbsPerDay,daysOnPasture,vetCostPerHead,transportPerHead,userID,futurePrice
+    // };
+    console.log("plansCode - delete-plan on click event handler");
+    console.log(
+      "plansCode - delete-plan on click event handler id = " + thisID
+    );
+    var thisID = $(this).data("data-id");
+    $.ajax({
+      url: "dashboard",
+      method: "DELETE",
+      data: { id: thisID }
+    }).then(function(response) {
+      console.log("plansCode.js - Delete on click");
+      console.log(response);
+      window.location.href = response;
+    });
+  })
+);
 
 // ***********************************************************
 // var plans = {
