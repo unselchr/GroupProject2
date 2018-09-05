@@ -83,10 +83,11 @@ form {
 }
 .form-group {
     margin: 0 auto; 
-    padding-top: 10px;
-    width: 400px;
-    text-align: center;
+    padding-top: 80px;
+    text-align: left;
     color: black;
+    width: 700px;
+    background-color: rgb(178, 189, 180);
 }    
 .form-group1 {
     margin: 0 auto; 
@@ -98,11 +99,12 @@ form {
 }
 .form-group3 {
     margin: 0 auto; 
-    padding-top: 1px;
+    padding-top: 100px;
     padding-bottom: 10px;
     text-align: center;
     color: black;
-    margin-left: 0px;
+    width: 700px;
+    background-color: rgb(178, 189, 180);
 }
 /* Navbar */
 .signup {
@@ -115,6 +117,10 @@ form {
     margin-right: 30px;
 } 
 #signin {
+    text-align: center;
+    padding-bottom: 1px;
+}
+#signinemail2 {
     text-align: center;
     padding-bottom: 1px;
 }
@@ -134,6 +140,7 @@ form {
     width: 100%;
     letter-spacing: 0px;
     border-radius: 0;
+    position: fixed;
 }
 .navbar li a, .navbar .navbar-brand {
     color: rgb(252, 252, 252) !important;
