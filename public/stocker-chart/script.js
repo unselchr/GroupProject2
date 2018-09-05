@@ -7,6 +7,51 @@ $.ajax({
 
 }).then(function(response) {
   console.log(response);
+  console.log(response[0].interestRate);
+
+
+    //--------------------------
+  // Calculations Section
+  //--------------------------
+  //
+  // 1. Cost Per Head to Purchase Each Calf
+  var purchaseCostPerHead = parseFloat(response[0].aveStartingWeight) * parseFloat(response[0].costPerHeadPer100Pounds);
+  console.log(purchaseCostPerHead);
+  //
+  // 2. Sum of Purchase Cost Per Head and Other Costs Per Head
+    var sumCostPerHead = purchaseCostPerHead + parseFloat(response[0].vetCostPerHead) + parseFloat(response[0].truckTripPerHead);
+    console.log(sumCostPerHead);
+  //
+  // 3. Calculate Interest Cost Per Head
+    var interestCostPerHead = parseFloat(response[0].interestRate) * purchaseCostPerHead;
+  //
+  // 4. Calculate Total Cost Per Head by Adding the Sum Per Head above and the Interest Cost Per Head
+    var totalCostPerHead = sumCostPerHead + interestCostPerHead;
+    console.log(totalCostPerHead);
+    $("#totalCostPerHead").text(totalCostPerHead);
+    //
+  // 5. Calculate the Total Cost
+    var totalCost = parseFloat(response[0].numHeadsPurchased) * totalCostPerHead;
+  //
+  // 6. Total Weight Gain Per Head
+    var totalWeightGainPerHead = parseFloat(response[0].weightGainPerDay) * parseFloat(response[0].numDaysOnPasture);
+  //
+  // 6. Final Weight Per Head by adding Starting Weight to Total Weight Gain Per Head
+    var finalWeightPerHead = parseFloat(response[0].aveStartingWeight) + totalWeightGainPerHead;
+    $("#finalWeightPerHead").text(finalWeightPerHead);
+  //
+  // 7. Total Sale Price Per Head is the final weight times the sale price per hundred pounds 
+    var totalSalePricePerHead = finalWeightPerHead * parseFloat(response[0].pricePerHeadPer100Pounds);
+    $("#salePricePerHead").text(totalSalePricePerHead);
+  //
+  // 8. Total (Sale) Price
+    var totalPrice = parseFloat(response[0].numHeadsPurchased) * totalSalePricePerHead;
+    $("#totalSalePrice").text(totalPrice);
+  //
+  // 9. Total Margin
+    var totalMargin = totalPrice - totalCost;
+    $("#totalMargin").text(totalMargin);
+  //
 
   
 });
