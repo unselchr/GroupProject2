@@ -106,7 +106,7 @@ $.ajax({
         },
         {
           data: monthlyTotalPriceArray,
-          label: "Total Price",
+          label: "Total Sale Price",
           borderColor: "#8e5ea2",
           fill: false
         }
