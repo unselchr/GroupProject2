@@ -33,3 +33,18 @@ exports.onePlan = function(req, res) {
       }
     });
 };
+
+exports.deletePlan = function(req, res) {
+  plan
+    .destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(function() {
+      console.log("planController.js - export.deletePlan");
+      // res.json(dbPlan);
+      res.redirect("/appPlans");
+      // res.render("dashboard")
+    });
+};
