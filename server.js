@@ -59,3 +59,5 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+//mysql://b91ddbd3dbcd14:4393ecdf@us-cdbr-iron-east-01.cleardb.net/heroku_5de9537cc37f621?reconnect=true
+
