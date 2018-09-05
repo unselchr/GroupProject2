@@ -1,0 +1,30 @@
+{{!-- <h1>THIS IS A PROTECTED PAGE!!!!!!!!</h1> --}}
+{{!-- <h6>Your User ID is:<span id="userID">NULL</span></h6> --}}
+
+{{!-- <p>***************************************</p> --}}
+<br>
+<h2>Your Plans</h2>
+
+<ul>
+	{{!-- <p>dashboard.handlebars - html console.log</p> --}}
+	{{#if data.length}}
+		{{#each data}}
+		<P>
+			<strong>{{ this.planTitle }}</strong>
+			<button class="btn btn-default" id="calc-plan" data-id="{{this.id}}" data-title="{{this.planTitle}}">
+				{{!-- {{ data.planTitle }} --}}
+				Calculate
+			</button>
+
+			<button class="btn btn-default" id="delete-plan" data-id="{{this.id}}">Delete Plan</button>
+		</p>
+		{{/each}}
+	{{else}}
+		<h4>If you do not have any plans, please create one.</h4>
+		<h4>If you do have plans, please select the "My Plans" option </h4>
+		<h4>from the Account Pages menu</h4>
+	{{/if}}
+</ul>
+
+{{!-- <script src="js/auth.js"></script> --}}
+<script src="js/plansCode.js"></script>
