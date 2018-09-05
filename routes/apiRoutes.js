@@ -2,7 +2,7 @@
 var authController = require("../controllers/authcontroller");
 var planController = require("../controllers/planController");
 module.exports = function(app, passport) {
-  app.get("/dashboard", isLoggedIn, authController.dashboard);
+  app.get("/dashboard", isLoggedIn, planController.allPlans);
   //signup stuff below
   // app.get("/dashboard/:id");
   // app.get.findall({

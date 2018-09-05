@@ -27,9 +27,9 @@ exports.onePlan = function(req, res) {
     .then(function(data) {
       //console.log("\n\n" + data + "\n\n");
       if (!(data === null || data === {} || data === [])) {
-        res.json(data);
+        res.render("plan", { data: data });
       } else {
-        res.send("/404");
+        res.render("404");
       }
     });
 };
