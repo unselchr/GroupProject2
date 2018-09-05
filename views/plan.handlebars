@@ -16,118 +16,96 @@ pricePerHeadPer100Pounds:newPlan.futurePrice,
 userId:newPlan.userID --}}
 
 <!-- Container -->
+{{data.id}}
 <div id="contact jsondump" class="container-fluid bg-grey">
-  <h2 class="text-center">PARAMETERS FOR {{msg}} PLAN</h2>
+  <h2 class="text-center">PARAMETERS FOR {{data.msg}} PLAN</h2>
   <div class="row">
     <div class="col-sm-12 text-center">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Number of Head</h3>
-          <input class="form-control" value={{numHeadsPurchased}} type="text" required>{{numHeadsPurchased}}</input>
+          <h3>Number of Head: <span>{{data.numHeadsPurchased}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Average Starting Weight (lbs)</h3>
-          <input class="form-control" value={{aveStartingWeight}} type="text" required>
+          <h3>Average Starting Weight (lbs): <span>{{data.aveStartingWeight}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Cost Per Head Per Hundred Weight (lbs)</h3>
-          <input class="form-control" value={{costPerHeadPer100Pounds}} type="text" required>
+          <h3>Cost Per Head Per Hundred Weight (lbs): <span>{{data.costPerHeadPer100Pounds}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Pasture Acres Per Head</h3>
-          <input class="form-control" value={{pastureAcresPerHead}} type="text" required>
+          <h3>Pasture Acres Per Head: <span>{{data.pastureAcresPerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Pasture Rent Per Head</h3>
-          <input class="form-control" value={{pastureRentPerHead}} type="text" required>
+          <h3>Pasture Rent Per Head: <span>{{data.pastureRentPerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Vet Cost Per Head</h3>
-          <input class="form-control" value={{vetCostPerHead}} type="text" required>
+          <h3>Vet Cost Per Head: <span>{{data.vetCostPerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Trucking Cost Per Head</h3>
-          <input class="form-control" value={{truckTripPerHead}} type="text" required>
+          <h3>Trucking Cost Per Head: <span>{{data.truckTripPerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Interest Rate</h3>
-          <input class="form-control" value={{interestRate}} type="text" required>
+          <h3>Interest Rate: <span>{{data.interestRate}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Weight Gain Per Day (lbs)</h3>
-          <input class="form-control" value={{weightGainPerDay}} type="text" required>
+          <h3>Weight Gain Per Day (lbs): <span>{{data.weightGainPerDay}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Number of Days on Pasture</h3>
-          <input class="form-control" value={{numHeadsPurchased}} type="text" required>
+          <h3>Number of Days on Pasture: <span>{{data.numHeadsPurchased}}</span></h3>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Calculate</button>
-        </div>
-      </div>
-      
     </div>
   </div>
 
-  <h2 class="text-center">CALCULATED VALUES FOR {{msg}} PLAN</h2>
+  <h2 class="text-center">CALCULATED VALUES FOR {{data.msg}} PLAN</h2>
   <div class="row">
     <div class="col-sm-12 text-center">
 
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Total Cost Per Head (including interest)</h3>
-          <input class="form-control" value={{totalCostPerHead}} type="text" required>
+          <h3>Total Cost Per Head (including interest): <span>{{data.totalCostPerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Final Weight Per Head</h3>
-          <input class="form-control" value={{finalWeightPerHead}} type="text" required>
+          <h3>Final Weight Per Head: <span>{{data.finalWeightPerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Sale Price Per Head Per Hundred Pounds</h3>
-          <input class="form-control" value={{pricePerHeadPer100Pounds}} type="text" required>
+          <h3>Projected Sale Price Per Head Per Hundred Pounds: <span>{{data.pricePerHeadPer100Pounds}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Sale Price Per Head</h3>
-          <input class="form-control" value={{totalSalePricePerHead}} type="text" required>
+          <h3>Projected Sale Price Per Head: <span>{{data.totalSalePricePerHead}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Total Sale Price</h3>
-          <input class="form-control" value={{totalPrice}} type="text" required>
+          <h3>Projected Total Sale Price: <span>{{data.totalPrice}}</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Total Margin</h3>
-          <input class="form-control" value={{totalMargin}} type="text" required>
+          <h3>Projected Total Margin: <span>{{data.totalMargin}}</span></h3>
         </div>
       </div>
 
@@ -147,7 +125,7 @@ userId:newPlan.userID --}}
         </canvas>
 
       </div>
-      <script src="../stocker-chart/script.js"></script>
+      <script src="stocker-chart/script.js"></script>
 
     </div>
 
