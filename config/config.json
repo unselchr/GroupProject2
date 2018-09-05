@@ -6,7 +6,7 @@
     "database": "heroku_5de9537cc37f621",
     "host": "us-cdbr-iron-east-01.cleardb.net",
     "dialect": "mysql",
-    "use_env_variable": "JAWSDB_URL",
+    "use_env_variable": "JAWSDB_URL", 
     "logging": false
   },
   "test": {
