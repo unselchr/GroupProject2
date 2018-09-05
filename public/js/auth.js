@@ -64,7 +64,6 @@ $("#createPlan").on("click", function() {
     method: "POST",
     data: newPlan
   }).then(function(response) {
-    console.log("auth.js - createPlan on click");
     console.log(response);
     window.location.href = response;
   });
