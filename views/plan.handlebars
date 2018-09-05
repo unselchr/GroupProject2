@@ -1,19 +1,9 @@
 
-{{!-- Input Variables
-planTitle:newPlan.title,
-numHeadsPurchased:newPlan.heads,
-aveStartingWeight:newPlan.startingWeight,
-costPerHeadPer100Pounds:newPlan.costPerHundredLbs,
-isManualCPHP100:true,
-pastureAcresPerHead:newPlan.acresPerHead,
-pastureRentPerHead:newPlan.rentPerHead,
-vetCostPerHead:newPlan.vetCostPerHead,
-truckTripPerHead:newPlan.transportPerHead,
-interestRate:newPlan.interestRate,
-weightGainPerDay:newPlan.lbsPerDay,
-numDaysOnPasture:newPlan.daysOnPasture,
-pricePerHeadPer100Pounds:newPlan.futurePrice,
-userId:newPlan.userID --}}
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
+
 
 <!-- Container -->
 <h6>Plan ID:<span id="planID">{{data.id}}</span></h6>
@@ -126,7 +116,7 @@ userId:newPlan.userID --}}
         <h2>Average Starting Weight (lbs): <span>{{data.aveStartingWeight}}</span></h2>
         <h2>X-Axis: Number of Months After Purchase Date</h2>
 
-        <canvas id={{myChart}} width="1600" height="900">
+        <canvas id="myChart" width="1600" height="900">
             {{myChart}}
         </canvas>
 
