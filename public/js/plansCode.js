@@ -8,13 +8,14 @@ $("document").ready(
     // console.log("plansCode - calc-plan on click event handler");
     console.log("plansCode - calc-plan on click event handler id = " + thisID);
     $.ajax({
-      url: "plan:" + thisID,
+      url: "/plan:" + thisID,
       method: "GET"
       // data: { id: thisID }
     }).then(function(response) {
       // console.log("plansCode.js - Calc on click");
       console.log(response);
-      window.location.href = response;
+      //window.location.href = response;
+      document.write(response);
     });
   }),
 
