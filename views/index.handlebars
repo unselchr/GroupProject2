@@ -1,30 +1,30 @@
 
 <div class="jumbotron text-center">
-  <h1>FARMHAND</h1> 
+  <h1>FarmHand</h1> 
   <p>A Financial Tool For Cattle Producers To Plan Their Next Herd Addition</p> 
 </div>
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="row">
-    <div class="col-sm-8">
-      <h2> Let us chart your new herd.</h2><br>
+    <div class="col-sm-8" id="cattleText">
+      <h2> Let us chart your future to a new herd</h2><br>
       <h4> We care about your future. Let us help grow your farm. Commodities can bring uncertainty. We are here to take the fear out of your future.</h4><br>
       <p> The FARMHAND tool allows producers to project return when purchasing a stocker calf herd.  
       <p> Plug in your financial numbers to help you make the best decision regarding commodities.</p>
     </div>
-    <div class="col-sm-4">
-      <i class="fa fa-line-chart" style="font-size:275px;color:green"></i>
+    <div class="col-sm-4" id="cattle">
+      <img src="https://www.adventure-journal.com/wp-content/uploads/2018/03/a4ilmvdwxva6jb45qgrkuq52uy.jpg" alt="Cattle" height="300px" width="400px">
     </div>
   </div>
 </div>
-
+<!-- Container (Mission Section) -->
 <div class="container-fluid bg-grey">
   <div class="row">
-    <div class="col-sm-4">
-      <i class="fa fa-vcard-o" style="font-size:275px;color:green"></i>
+    <div class="col-sm-4" id="farmer">
+      <img src="http://farmflavor.com/wp-content/uploads/2010/04/john-740x493.jpg" alt="Farmers" height="300px" width="400px">
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8" id="farmerText">
       <h2>Our Values</h2><br>
       <h4><strong>MISSION:</strong> We value your business. We are dedicated professionals to bring you the best forecasts for the future and all the facts of the past.</h4><br>
       <p><strong>VISION:</strong> Choose FarmHand. Your farm is important to us as you are not just a farmer, you are a provider. Let us give you the information you need most to be the best provider you can be.</p>
@@ -72,41 +72,5 @@
       <p>We will never stop working for you.</p>
     </div>
   </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">Sign in today!</h2>
-    <div class="col-sm-12">
-      <div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 
