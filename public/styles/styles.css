@@ -42,7 +42,13 @@ h4 {
     padding: 60px 10px;
 }
 .container-fluid1 {
-    padding: 10px 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    color: grey;
+    text-align: center;
 }
 .bg-grey {
     background-color: #f6f6f6;
@@ -57,6 +63,10 @@ h4 {
 primaryColor {
     color: rgb(163, 23, 133);
     background-color: #f6f6f6;
+}
+#farmer {
+    padding-left: 30px;
+    overflow:hidden;
 }
 /* Chart */
 .wrapper {
@@ -121,6 +131,7 @@ form {
     border: 0;
     font-size: 12px !important;
     line-height: 1.42857143 !important; 
+    width: 100%;
     letter-spacing: 0px;
     border-radius: 0;
 }
@@ -134,11 +145,11 @@ form {
 .dropdown-menu {
     background-color: rgb(62, 146, 13);
 }
-/* #nav1 {
-    float: left;
-} */
-#navbarSupportedContent {
-    
+#nav1 {
+    display: inline;
+}
+#nav2 {
+    display: flex;
 }
 /* 404 image */
 .img404 {
@@ -149,7 +160,7 @@ form {
     width: 50%;
 }
 /* Page dimensions */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 480px) {
 .col-sm-4 {
     text-align: center;
     margin: 25px 0;
