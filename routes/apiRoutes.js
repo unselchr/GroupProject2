@@ -1,15 +1,11 @@
-//var db = require("../models");
+// var db = require("../models");
 var authController = require("../controllers/authcontroller");
 var planController = require("../controllers/planController");
 module.exports = function(app, passport) {
   app.get("/dashboard", isLoggedIn, planController.allPlans);
   //signup stuff below
-  // app.get("/dashboard/:id");
-  // app.get.findall({
-  //   where: {
-  //     id: "req.params.id"
-  //   }
-  // });
+
+  app.delete("/dashboard", isLoggedIn, planController.deletePlan);
 
   app.get("/signup", authController.signup);
   app.post(

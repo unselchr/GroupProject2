@@ -11,12 +11,12 @@
 		{{#each data}}
 		<P>
 			<strong>{{ this.planTitle }}</strong>
-			<button class="btn btn-default" id="calc-plan" data-id="{{this.id}}" data-title="{{this.planTitle}}">
+			<button class="btn btn-default calc-plan" data-id="{{this.id}}" data-title="{{this.planTitle}}">
 				{{!-- {{ data.planTitle }} --}}
 				Calculate
 			</button>
 
-			<button class="btn btn-default" id="delete-plan" data-id="{{this.id}}">Delete Plan</button>
+			<button class="btn btn-default delete-plan" data-id="{{this.id}}">Delete Plan</button>
 		</p>
 		{{/each}}
 	{{else}}
