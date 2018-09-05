@@ -1,5 +1,22 @@
+$.ajax({
+  url: "jsonPlan:" + window.location.href.substring(window.location.href.indexOf(":"), window.location.href.length),
+  method: "GET"
 
-function displayResults() {
+}).then(function(response) {
+  console.log(response);
+});
+
+
+function displayResults(aveStartingWeight,
+  costPerHeadPer100Pounds,
+  vetCostPerHead,
+  truckTripPerHead,
+  interestRate,
+  numHeadsPurchased, 
+  weightGainPerDay,
+  numDaysOnPasture,
+  pricePerHeadPer100Pounds,
+  totalSalePricePerHead) {
 
   // Our labels along the x-axis
   var months = [0, 1, 2, 3, 4, 5, 6];
@@ -62,6 +79,7 @@ function displayResults() {
     var totalMargin = totalPrice - totalCost;
   //
   //
+}
 
   //--------------------------
   // Array Calculations Section (calculate these values for the purchase date
@@ -133,3 +151,4 @@ function requestQuote(twoDigitYear) {
     }
   );
 }
+
