@@ -13,11 +13,12 @@ describe("GET /api/users", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
+    console.log("in beforeEach");
     request = chai.request(server);
     return db.sequelize.sync({ force: true });
   });
 
-  it("should find all examples", function(done) {
+  it("should find all users", function(done) {
     // Add some examples to the db to test with
     db.user
       .bulkCreate([

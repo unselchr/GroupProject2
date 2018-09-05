@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 
 var request;
 
-describe("POST /api/users", function() {
+describe("POST /api/plans", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
@@ -17,21 +17,28 @@ describe("POST /api/users", function() {
     return db.sequelize.sync({ force: true });
   });
 
-  it("should save a user named Fred Flintstone", function(done) {
+  it("should save a Plan with a Title of Test Plan 1", function(done) {
     // Create an object to send to the endpoint
     var reqBody = {
-      firstname: "Fred",
-      lastname: "Flinstone",
-      username: "Fstone",
-      about: "about",
-      email: "fredf@somewhere.com",
-      password: "flint",
-      lastLogin: "2018-08-29T09:05:02.000Z"
+      planTitle: "Test Plan 1",
+      numHeadsPurchased: 10,
+      aveStartingWeight: 200,
+      costPerHeadPer100Pounds: 20.5,
+      isManualCPHP100: true,
+      pastureAcresPerHead: 2,
+      pastureRentPerHead: 10.25,
+      vetCostPerHead: 25.0,
+      truckTripPerHead: 1.0,
+      interestRate: 5.0,
+      weightGainPerDay: 20.0,
+      numDaysOnPasture: 30,
+      pricePerHeadPer100Pounds: 50.5
+      // userId: 1
     };
 
     // POST the request body to the server
     request
-      .post("/api/users")
+      .post("/api/plans")
       .send(reqBody)
       .end(function(err, res) {
         var responseStatus = res.status;

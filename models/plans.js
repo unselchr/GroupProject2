@@ -10,7 +10,7 @@
 // ************************************************************
 
 module.exports = function(sequelize, DataTypes) {
-  var Plans = sequelize.define("Plans", {
+  var Plan = sequelize.define("plan", {
     planTitle: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -89,5 +89,5 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  return Plans;
+  return Plan;
 };
