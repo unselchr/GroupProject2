@@ -6,7 +6,6 @@
     "database": "heroku_5de9537cc37f621",
     "host": "us-cdbr-iron-east-01.cleardb.net",
     "dialect": "mysql",
-    "use_env_variable": "JAWSDB_URL", 
     "logging": false
   },
   "test": {
@@ -16,7 +15,6 @@
     "database": "heroku_5de9537cc37f621",
     "host": "us-cdbr-iron-east-01.cleardb.net",
     "dialect": "mysql",
-    "use_env_variable": "JAWSDB_URL", 
     "logging": false
   },
   "production": {
@@ -26,7 +24,6 @@
     "database": "heroku_5de9537cc37f621",
     "host": "us-cdbr-iron-east-01.cleardb.net",
     "dialect": "mysql",
-    "use_env_variable": "JAWSDB_URL", 
     "logging": false
   }
 }

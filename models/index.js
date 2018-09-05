@@ -12,10 +12,10 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
   var sequelize = new Sequelize(
-    config.database,
-    config.username,
-    config.password,
-    config
+    "heroku_5de9537cc37f621",
+    "b91ddbd3dbcd14",
+    "4393ecdf",
+    {host:"us-cdbr-iron-east-01.cleardb.net","dialect": "mysql"}
   );
 }
 
