@@ -134,6 +134,12 @@ form {
 .dropdown-menu {
     background-color: rgb(62, 146, 13);
 }
+/* #nav1 {
+    float: left;
+} */
+#navbarSupportedContent {
+    
+}
 /* 404 image */
 .img404 {
     display: block;
@@ -147,10 +153,10 @@ form {
 .col-sm-4 {
     text-align: center;
     margin: 25px 0;
-}
+} 
 }
 @media screen and (max-width: 480px) {
 .logo {
       font-size: 150px;
 }
-}
+} 
