@@ -1,9 +1,14 @@
+//var url = "/jsonPlan:" + window.location.href.substring(window.location.href.indexOf(":"), window.location.href.length);
+//console.log(url);
+
 $.ajax({
-  url: "jsonPlan:" + window.location.href.substring(window.location.href.indexOf(":"), window.location.href.length),
+  url: "/jsonPlan:" + $("#planID").text(),
   method: "GET"
 
 }).then(function(response) {
   console.log(response);
+
+  
 });
 
 
@@ -129,7 +134,6 @@ function displayResults(aveStartingWeight,
       ]
     }
   });
-};
 
 // Script for requesting a quote on September feeder calves from the Barchart API
 //
