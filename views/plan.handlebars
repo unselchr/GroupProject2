@@ -16,9 +16,9 @@ pricePerHeadPer100Pounds:newPlan.futurePrice,
 userId:newPlan.userID --}}
 
 <!-- Container -->
-{{data.id}}
+<h6>Plan ID:<span id="planID">{{data.id}}</span></h6>
 <div id="contact jsondump" class="container-fluid bg-grey">
-  <h2 class="text-center">PARAMETERS FOR {{data.msg}} PLAN</h2>
+  <h2 class="text-center">PARAMETERS FOR {{data.planTitle}} PLAN</h2>
   <div class="row">
     <div class="col-sm-12 text-center">
       <div class="row">
@@ -74,38 +74,39 @@ userId:newPlan.userID --}}
     </div>
   </div>
 
-  <h2 class="text-center">CALCULATED VALUES FOR {{data.msg}} PLAN</h2>
+  <h2 class="text-center">CALCULATED VALUES FOR {{data.planTitle}} PLAN</h2>
+  {{!-- ahhhhhhhhhhhhhhhhhhhhhhhhhh!!!!!!!!!!!!!!!!!!!!!!!!!!!! --}}
   <div class="row">
     <div class="col-sm-12 text-center">
 
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Total Cost Per Head (including interest): <span>{{data.totalCostPerHead}}</span></h3>
+          <h3>Total Cost Per Head (including interest): <span id="totalCostPerHead"></span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Final Weight Per Head: <span>{{data.finalWeightPerHead}}</span></h3>
+          <h3>Final Weight Per Head: <span id="finalWeightPerHead"></span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Sale Price Per Head Per Hundred Pounds: <span>{{data.pricePerHeadPer100Pounds}}</span></h3>
+          <h3>Projected Sale Price Per Head Per Hundred Pounds: <span id="salePricePer100"></span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Sale Price Per Head: <span>{{data.totalSalePricePerHead}}</span></h3>
+          <h3>Projected Sale Price Per Head: <span id="salePricePerHead">{</span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Total Sale Price: <span>{{data.totalPrice}}</span></h3>
+          <h3>Projected Total Sale Price: <span id="totalSalePrice"></span></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <h3>Projected Total Margin: <span>{{data.totalMargin}}</span></h3>
+          <h3>Projected Total Margin: <span id="totalMargin"></span></h3>
         </div>
       </div>
 
