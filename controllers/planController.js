@@ -44,7 +44,8 @@ exports.deletePlan = function(req, res) {
   plan
     .destroy({
       where: {
-        id: req.params.id
+        id: req.params.id,
+        userId: req.session.passport.user
       }
     })
     .then(function() {
