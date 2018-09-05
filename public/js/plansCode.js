@@ -1,5 +1,23 @@
 // var db = require("../modules");
 $("document").ready(
+  $(".calc-plan").on("click", function(event) {
+    event.preventDefault();
+    //takes a json object with keys title,heads,rentPerHead,startingWeight,costPerHundredLbs,acresPerHead,otherCostPerHead,interestRate,lbsPerDay,daysOnPasture,vetCostPerHead,transportPerHead,userID,futurePrice
+    // };
+    var thisID = $(this).attr("data-id");
+    // console.log("plansCode - calc-plan on click event handler");
+    console.log("plansCode - calc-plan on click event handler id = " + thisID);
+    $.ajax({
+      url: "plan:" + thisID,
+      method: "GET"
+      // data: { id: thisID }
+    }).then(function(response) {
+      // console.log("plansCode.js - Calc on click");
+      console.log(response);
+      window.location.href = response;
+    });
+  }),
+
   $("#delete-plan").on("click", function() {
     event.preventDefault();
     //takes a json object with keys title,heads,rentPerHead,startingWeight,costPerHundredLbs,acresPerHead,otherCostPerHead,interestRate,lbsPerDay,daysOnPasture,vetCostPerHead,transportPerHead,userID,futurePrice

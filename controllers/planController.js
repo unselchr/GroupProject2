@@ -10,7 +10,7 @@ exports.allPlans = function(req, res) {
       }
     })
     .then(function(data) {
-      console.log("planController - findAll");
+      console.log("planController - exports.allPlans");
       // console.log("planController - findAll - data = " + res.json(data));
       // res.json(data);
       res.render("dashboard", { data: data });
@@ -26,6 +26,11 @@ exports.onePlan = function(req, res) {
     })
     .then(function(data) {
       //console.log("\n\n" + data + "\n\n");
+      console.log("planController.js - exports.onePlan");
+      console.log(
+        "planController.js - exports.onePlan data[0] = " +
+          JSON.stringify(data[0])
+      );
       if (!(data === null || data === {} || data === [])) {
         //console.log(data[0].id);
         res.render("plan", { data: data[0] });
@@ -59,6 +64,7 @@ exports.jsonPlan = function(req, res) {
       }
     })
     .then(function(data) {
+      console.log("planController.js - export.jsonPlan");
       //console.log("\n\n" + data + "\n\n");
       if (!(data === null || data === {} || data === [])) {
         //console.log(data[0].id);
