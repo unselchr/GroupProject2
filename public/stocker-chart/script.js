@@ -1,5 +1,27 @@
+//var url = "/jsonPlan:" + window.location.href.substring(window.location.href.indexOf(":"), window.location.href.length);
+//console.log(url);
 
-function displayResults() {
+$.ajax({
+  url: "/jsonPlan:" + $("#planID").text(),
+  method: "GET"
+
+}).then(function(response) {
+  console.log(response);
+
+  
+});
+
+
+function displayResults(aveStartingWeight,
+  costPerHeadPer100Pounds,
+  vetCostPerHead,
+  truckTripPerHead,
+  interestRate,
+  numHeadsPurchased, 
+  weightGainPerDay,
+  numDaysOnPasture,
+  pricePerHeadPer100Pounds,
+  totalSalePricePerHead) {
 
   // Our labels along the x-axis
   var months = [0, 1, 2, 3, 4, 5, 6];
@@ -62,6 +84,7 @@ function displayResults() {
     var totalMargin = totalPrice - totalCost;
   //
   //
+}
 
   //--------------------------
   // Array Calculations Section (calculate these values for the purchase date
@@ -111,7 +134,6 @@ function displayResults() {
       ]
     }
   });
-};
 
 // Script for requesting a quote on September feeder calves from the Barchart API
 //
@@ -133,3 +155,4 @@ function requestQuote(twoDigitYear) {
     }
   );
 }
+

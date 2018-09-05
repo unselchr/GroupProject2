@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
 
-    "password": "Cu3043598$",
+    "password": "root",
     "database": "farmPredictionDB",
     "host": "localhost",
     "dialect": "mysql",
@@ -10,7 +10,7 @@
   },
   "test": {
     "username": "root",
-    "password": "rootroot",
+    "password": "root",
     "database": "farmPredictionDB",
     "host": "localhost",
     "dialect": "mysql",
